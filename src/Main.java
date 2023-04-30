@@ -5,6 +5,7 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
     }
 
     public static void task1() {
@@ -80,6 +81,25 @@ public class Main {
         while (accumulation < 12_000_000) {
             i++;
 
+            summ = summ + summ / 100 * 7;
+            summ = summ + depositPenny;
+            accumulation = summ;
+            if (i % 6 == 0) {
+                System.out.println("Месяц " + i + ", сумма накоплений равна  " + accumulation + " рублей");
+            }
+        }
+    }
+
+    public static void task6() {
+        System.out.println("Решение задачи №6");
+        int deposit = 15000;
+        int depositPenny = deposit;
+        int accumulation = 0;
+        int summ = 0;
+        int ear = 9 * 12;
+        int i = 0;
+        while (i <= ear) {
+            i++;
             summ = summ + summ / 100 * 7;
             summ = summ + depositPenny;
             accumulation = summ;
