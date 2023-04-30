@@ -3,6 +3,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
 
     public static void task1() {
@@ -11,11 +12,9 @@ public class Main {
         int deposit = 15000;
         int i = 0;
         while (total <= 2_459_000) {
-            if (total <= 2_459_000) {
-                i++;
-                total = total + deposit;
-                System.out.println("Месяц  " + i + ", сумма накоплений равна " + total + " рублей");
-            } else break;
+            i++;
+            total = total + deposit;
+            System.out.println("Месяц  " + i + ", сумма накоплений равна " + total + " рублей");
         }
     }
 
@@ -43,14 +42,30 @@ public class Main {
         int fertilityResult = result * fertility;
         int mortalityResult = result / mortality;
         int earResult = fertilityResult - mortalityResult;
-        int i = 0;
         int b = 0;
-        while (i < 10) {
-            if (b < 10) {
-                b++;
-                people = people + earResult;
-                System.out.println("Год " + b + " ,численность населения составляет " + people);
-            } else break;
+        while (b < 10) {
+            b++;
+            people = people + earResult;
+            System.out.println("Год " + b + " ,численность населения составляет " + people);
+        }
+    }
+
+    public static void task4() {
+        System.out.println("Решение задачи №4");
+        int deposit = 15000;
+        int depositPenny = deposit;
+        int accumulation = 0;
+        int summ = 0;
+        int i = 0;
+        while (accumulation < 12_000_000) {
+            i++;
+
+            summ = summ + summ / 100 * 7;
+            summ = summ + depositPenny;
+            accumulation = summ;
+            System.out.println("Месяц " + i + ", сумма накоплений равна  " + accumulation + " рублей");
+
+
         }
     }
 }
