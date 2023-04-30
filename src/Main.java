@@ -31,6 +31,7 @@ public class Main {
         for (; i > 0; i--) {
             System.out.print(" " + i + " ");
         }
+        System.out.println();
     }
 
     public static void task3() {
@@ -41,14 +42,14 @@ public class Main {
         int result = 12_000_000 / 1000;
         int fertilityResult = result * fertility;
         int mortalityResult = result / mortality;
-        int earResult = people + fertilityResult - mortalityResult;
+        int earResult = fertilityResult - mortalityResult;
         int i = 0;
         int b = 0;
         while (i < 10) {
             if (b < 10) {
                 b++;
-                earResult++;
-                System.out.println("Год " + b + " ,численность населения составляет " + earResult);
+                people = people + earResult;
+                System.out.println("Год " + b + " ,численность населения составляет " + people);
             } else break;
         }
     }
