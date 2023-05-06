@@ -7,6 +7,7 @@ public class Main {
         task5();
         task6();
         task7();
+        task8();
     }
 
     public static void task1() {
@@ -15,9 +16,9 @@ public class Main {
         int deposit = 15000;
         int i = 0;
         while (total <= 2_459_000) {
+            System.out.println("Месяц  " + i + ", сумма накоплений равна " + total + " рублей");
             i++;
             total = total + deposit;
-            System.out.println("Месяц  " + i + ", сумма накоплений равна " + total + " рублей");
         }
     }
 
@@ -78,13 +79,12 @@ public class Main {
         int i = 0;
         while (accumulation < 12_000_000) {
             i++;
-
-            summ = summ + summ / 100 * 7;
-            summ = summ + depositPenny;
-            accumulation = summ;
             if (i % 6 == 0) {
                 System.out.println("Месяц " + i + ", сумма накоплений равна  " + accumulation + " рублей");
             }
+            summ = summ + summ / 100 * 7;
+            summ = summ + depositPenny;
+            accumulation = summ;
         }
     }
 
@@ -106,12 +106,28 @@ public class Main {
             }
         }
     }
-    public static void task7(){
+
+    public static void task7() {
         System.out.println("Решение задачи №7");
-        int i =1;
-        while (i<31){
-            System.out.println("Сегодня пятница, " + i+  " число. Необходимо подготовить отчет");
-            i=i+7;
+        int i = 1;
+        while (i < 31) {
+            System.out.println("Сегодня пятница, " + i + " число. Необходимо подготовить отчет");
+            i = i + 7;
         }
+    }
+
+    public static void task8() {
+        System.out.println("Решение задачи №7");
+        int i = 0;
+        int ear = 0;
+        while (i < 2100) {
+            i++;
+            ear++;
+            if (ear > 1823 && ear < 2000 && ear % 79 == 0) {
+                System.out.println(ear);
+            } else if (ear > 2000 && ear < 2100 && ear % 79 == 0) {
+                System.out.println(ear);
+            }
         }
+    }
 }
